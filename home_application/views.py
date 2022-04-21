@@ -35,3 +35,10 @@ def contact(request):
     联系页
     """
     return render(request, "home_application/contact.html")
+
+
+def homework_ad(request):
+    """
+    第三课作业-流氓广告
+    """
+    return render(request, "home_application/homework_ad.html")
