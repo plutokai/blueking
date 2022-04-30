@@ -42,3 +42,10 @@ def homework_ad(request):
     第三课作业-流氓广告
     """
     return render(request, "home_application/homework_ad.html")
+
+
+def homework_vue_base(request):
+    """
+    第四课作业-vue基础
+    """
+    return render(request, "home_application/homework_vue_base.html")

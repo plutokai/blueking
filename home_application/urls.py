@@ -20,4 +20,5 @@ urlpatterns = (
     url(r"^dev-guide/$", views.dev_guide),
     url(r"^contact/$", views.contact),
     url(r"^homework_ad/$", views.homework_ad),
+    url(r"^homework_vue_base/$", views.homework_vue_base),
 )
