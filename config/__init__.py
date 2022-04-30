@@ -38,14 +38,15 @@ def get_env_or_raise(key):
 
 
 # 应用 ID
-APP_CODE = os.getenv("BKPAAS_APP_ID", "")
+APP_CODE = os.getenv("BKPAAS_APP_ID", "books-management")
 # 应用用于调用云 API 的 Secret
-SECRET_KEY = os.getenv("BKPAAS_APP_SECRET", "")
+SECRET_KEY = os.getenv("BKPAAS_APP_SECRET", "y9jNJiNm7lQthS0vgbvsoyErNwBzkfUHcPgy")
 
 # SaaS运行版本，如非必要请勿修改
 RUN_VER = "open"
 # 蓝鲸SaaS平台URL，例如 http://paas.bking.com
-BK_URL = None
+# BK_URL = None
+BK_URL = "https://paas-edu.bktencent.com/"
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
