@@ -36,16 +36,15 @@ if FRONTEND_BACKEND_SEPARATION:
     CORS_ORIGIN_ALLOW_ALL = True
     CORS_ALLOW_CREDENTIALS = True
 
-# DATABASES.update(
-#     {
-#         'default': {
-#             'ENGINE': 'django.db.backends.mysql',
-#             'NAME': '',  # 数据库名
-#             'USER': '',  # 数据库用户
-#             'PASSWORD': '',  # 数据库密码
-#             'HOST': '',  # 数据库主机
-#             'PORT': '3306',  # 数据库端口
-#         },
-#     }
-# )
-
+DATABASES.update(
+    {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'bkapp-books-m-16',  # 数据库名
+            'USER': 'bkapp-books-m-16',  # 数据库用户
+            'PASSWORD': 'nAB4G8Yzony',  # 数据库密码
+            'HOST': '10.0.2.5',  # 数据库主机
+            'PORT': '3306',  # 数据库端口
+        },
+    }
+)

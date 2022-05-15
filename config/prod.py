@@ -28,16 +28,16 @@ RUN_MODE = "PRODUCT"
 
 # 正式环境数据库可以在这里配置
 
-# DATABASES.update(
-#     {
-#         'default': {
-#             'ENGINE': 'django.db.backends.mysql',
-#             'NAME': '',  # 数据库名
-#             'USER': '',  # 数据库用户
-#             'PASSWORD': '',  # 数据库密码
-#             'HOST': '',  # 数据库主机
-#             'PORT': '3306',  # 数据库端口
-#         },
-#     }
-# )
+DATABASES.update(
+    {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'bkapp-books-m-20',  # 数据库名
+            'USER': 'bkapp-books-m-20',  # 数据库用户
+            'PASSWORD': '5x9faMHk6nv',  # 数据库密码
+            'HOST': '10.0.2.5',  # 数据库主机
+            'PORT': '3306',  # 数据库端口
+        },
+    }
+)
 
