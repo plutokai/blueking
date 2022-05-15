@@ -13,6 +13,7 @@ specific language governing permissions and limitations under the License.
 
 from django.conf.urls import url
 
+# from home_application.views import Login
 from . import views
 
 urlpatterns = (
@@ -21,4 +22,10 @@ urlpatterns = (
     url(r"^contact/$", views.contact),
     url(r"^homework_ad/$", views.homework_ad),
     url(r"^homework_vue_base/$", views.homework_vue_base),
+    # url(r"^login/$", Login.as_view()),
+    url(r"^login/$", views.login),
+    url(r"^user/$", views.user),
+    url(r"^get_articles/$", views.get_articles),
+    url(r"^create_user/$", views.create_user),
+    url(r"^article/$", views.create_article),
 )

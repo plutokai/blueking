@@ -63,7 +63,9 @@ INSTALLED_APPS += (  # noqa
 # )
 
 # 自定义中间件
-MIDDLEWARE += ()  # noqa
+MIDDLEWARE += (
+    'home_application.middleware.ResponseMiddleware',
+)  # noqa
 
 # 默认数据库AUTO字段类型
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
