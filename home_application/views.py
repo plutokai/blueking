@@ -22,8 +22,7 @@ from requests import Response
 
 from home_application.exception import ParamError, LoginError, RequestMethodError
 from home_application.models import User, Article
-from home_application.response import ErrorResponse
-from home_application.utils import re_success, re_fail
+from blueking.component.shortcuts import get_client_by_request
 
 
 def home(request):
@@ -184,3 +183,31 @@ def get_articles(request):
             raise ParamError(data={"user_id":[{"message": "The user is not exists", "code": "error"}]})
     else:
         raise RequestMethodError(data="只能使用get方法")
+
+
+def notice(request):
+    """
+    第七课作业-发送邮件
+    :param request:
+    :return:
+    """
+    return render(request, "home_application/notice.html")
+
+
+def send_email_notice(request):
+    """
+    第七课作业-发送邮件通知
+    :param request:
+    :return:
+    """
+    address = request.POST.get("email_address", "")
+    title = request.POST.get("email_title", "")
+    content = request.POST.get("email_content", "")
+    request_data = {
+        "receiver": address,
+        "title": title,
+        "content": content,
+    }
+    client = get_client_by_request(request)
+    resp = client.cmsi.send_mail(request_data)
+    return JsonResponse(resp)

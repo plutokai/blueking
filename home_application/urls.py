@@ -28,4 +28,6 @@ urlpatterns = (
     url(r"^get_articles/$", views.get_articles),
     url(r"^create_user/$", views.create_user),
     url(r"^article/$", views.create_article),
+    url(r"^notice/$", views.notice),
+    url(r"^send_email_notice/$", views.send_email_notice),
 )
