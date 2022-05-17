@@ -73,10 +73,10 @@
                 "email_content": email_content
             },
             success: function (ret) {
-                if (ret.result) {
+                if (ret.data['result']) {
                     alert("发送成功")
                 }else{
-                    alert("发送失败" + ret.message)
+                    alert("发送失败" + ret.data['message'])
                 }
             }
         })
